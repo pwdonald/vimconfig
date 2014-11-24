@@ -47,3 +47,8 @@ function! Smart_TabComplete()
     return "\<C-X>\<C-O>"                         " plugin matching
   endif
 endfunction
+
+inoremap <tab> <c-r>=Smart_TabComplete()<CR>
+
+map <leader>pj :%!python -m json.tool<CR>
+map <leader>px :%!xmllint % --format<CR>
