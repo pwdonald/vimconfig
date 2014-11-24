@@ -27,6 +27,10 @@ set confirm
 "colorscheme setting"
 colorscheme jellybeans
 
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+
 function! Smart_TabComplete()
   let line = getline('.')                         " current line
 
@@ -52,3 +56,4 @@ inoremap <tab> <c-r>=Smart_TabComplete()<CR>
 
 map <leader>pj :%!python -m json.tool<CR>
 map <leader>px :%!xmllint % --format<CR>
+
