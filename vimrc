@@ -33,4 +33,8 @@ colorscheme jellybeans
 
 map <leader>pj :%!python -m json.tool<CR>
 map <leader>px :%!xmllint % --format<CR>
+map <c-f> :call JsBeautify()<cr>
 
+set wildignore+=*/node_modules/*
+set laststatus=2
+let g:airline_powerline_fonts = 1
